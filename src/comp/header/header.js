@@ -7,9 +7,11 @@ const Header = () => {
     return (
 
         <HeaderContainer>
-            <button>Home</button>
-            <button>Search</button>
-            <button>Login</button>
+            <div>
+                <button>Home</button>
+                <button>Search</button>
+            </div>
+                <button>Login</button>
         </HeaderContainer>
 
     )
