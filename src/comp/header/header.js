@@ -10,6 +10,7 @@ const Header = () => {
             <div>
                 <button>Home</button>
                 <button>Search</button>
+                <button>Add recipe</button>
             </div>
                 <button>Login</button>
         </HeaderContainer>
