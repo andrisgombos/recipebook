@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../header/header';
-import { homeContainer, ImageContainer } from './style';
+import { homeContainer, ImageContainer, RecipeList, RecipeContainer, SearchBar } from './style';
 
 const HomePage = () => {
 
@@ -10,11 +10,15 @@ const HomePage = () => {
         <homeContainer>
             <Header/>
             <ImageContainer>
-                <input className='searchBar'></input>
-                <button className='searchButton'></button>
+                <SearchBar placeholder='Search...'></SearchBar>
             </ImageContainer>
-            <div className='recipeList'>
-            </div>
+            <RecipeList>
+                <RecipeContainer/>
+                <RecipeContainer/>
+                <RecipeContainer/>
+                <RecipeContainer/>
+            </RecipeList>
+
         </homeContainer>
     )
 }
