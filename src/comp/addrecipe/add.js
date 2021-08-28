@@ -5,12 +5,16 @@ import RecipeIngridients from './ingridient'
 
 const AddRecipe = () => {
 
+    const initialValues = [
+        /* {value:'kakao'},  // test ingridient
+        {value:'liszt'} */   // test ingridient   
+        ]; 
 
-    const [ingridients, setIngridients] = useState([]);
+    const [ingridients, setIngridients] = useState(initialValues);
     const [value, setValue] = useState('');
 
-    const addIngridient = (newI) => {
-        const newIngridients = [...ingridients, {newI}];
+    const addIngridient = (value) => {
+        const newIngridients = [...ingridients, {value}];
         setIngridients(newIngridients)
     }
 
@@ -32,18 +36,17 @@ const AddRecipe = () => {
                         <div>
                             {ingridients.map((ingridient, index) => {
                                 return <div
-                                            key={index}
-                                            ingridient={ingridient}
-                                            >
-                                            {ingridients}
+                                        key={ingridient.index}
+                                        index={ingridient.index}
+                                        ingridient={ingridient.value}
+                                        >{ingridient.value}
                                         </div>
-                            
-                                })
-                            }
+                            })}
                         </div>
                         <AddPreparation 
                             placeholder='New ingridient'
                             value={value}
+                            type='text'
                             onChange={e => setValue(e.target.value)}
                             />
                     </form>

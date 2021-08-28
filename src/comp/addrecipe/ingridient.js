@@ -1,10 +1,10 @@
 import React from 'react';
 
-const RecipeIngridients = (ingridient) => {
+const RecipeIngridients = (ingridient, index) => {
 
     return (
         <div>
-            <div>{ingridient}</div>
+            <div>{ingridient.value}</div>
             <button>X</button>
         </div>
     )
