@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { AddContainer, AddInput, AddPreparation, BottomWrapper, RecipeWrapper, TopWrapper } from './style';
+import { AddContainer, AddInput, AddPreparation, BottomWrapper, BottomWrapperLeft, BottomWrapperRight, RecipeWrapper, TopWrapper } from './style';
 import RecipeIngridients from './ingridient'
 
 
@@ -12,6 +12,9 @@ const AddRecipe = () => {
 
     const [ingridients, setIngridients] = useState(initialValues);
     const [value, setValue] = useState('');
+    const [preparation, setPreparation] = useState('')
+    const [difficulty, setDifficulty] = useState('')
+    const [name, setName] = useState('')
 
     const addIngridient = (value) => {
         const newIngridients = [...ingridients, {value}];
@@ -29,9 +32,14 @@ const AddRecipe = () => {
         <RecipeWrapper>
             <AddContainer>
                 <TopWrapper>
-                    <AddInput/>
+                    <AddInput 
+                        placeholder='Recipe name'
+                        onChange={(e)=>setName(e.target.value)}
+                        />
+                    <img style={{width: '150px'}} src='https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg'></img>
                 </TopWrapper>
                 <BottomWrapper>
+                    <BottomWrapperLeft>
                     <form onSubmit={handleSubmit}>
                         <div>
                             {ingridients.map((ingridient, index) => {
@@ -50,7 +58,19 @@ const AddRecipe = () => {
                             onChange={e => setValue(e.target.value)}
                             />
                     </form>
+                    </BottomWrapperLeft>
+                    <BottomWrapperRight> 
+                        <label for='prep'>Preparation Instructions</label>
+                        <textarea cols='40' rows='5' onChange={(e)=>setPreparation(e.target.value)}></textarea>
+                        <select name='difficulty' placeholder='Difficulty' onChange={(e)=>setDifficulty(e.target.value)}>
+                            <option value='category' disabled selected>Select a category</option>
+                            <option value='easy'>Easy</option>
+                            <option value='medium'>Medium</option>
+                            <option value='hard'>Hard</option>
+                        </select>
+                    </BottomWrapperRight>
                 </BottomWrapper>
+                <button>Submit</button>
             </AddContainer>
         </RecipeWrapper>
     )

@@ -27,11 +27,12 @@ export const AddInput = styled.input`
     `
 
 export const TopWrapper = styled.div`
-    height: 30vh;
+    height: 50vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     `
 export const BottomWrapper = styled.div`
     height: 50vh;
@@ -42,8 +43,17 @@ export const BottomWrapper = styled.div`
     justify-content: center;
     `
 
+export const BottomWrapperLeft = styled.div`
+    display: flex;
+    flex-direction: column;
+    `
+export const BottomWrapperRight = styled.div`
+    display: flex;
+    flex-direction: column;
+    `
+
 export const AddPreparation = styled.input`
-    width: 100%;
+    width: 50%;
     height: 2rem;
     background-color: rgb(255, 255, 255);
     border: none;
