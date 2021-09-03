@@ -12,6 +12,7 @@ const AddRecipe = () => {
 
     const [ingridients, setIngridients] = useState(initialValues);
     const [value, setValue] = useState('');
+    
     const [preparation, setPreparation] = useState('')
     const [difficulty, setDifficulty] = useState('')
     const [name, setName] = useState('')
