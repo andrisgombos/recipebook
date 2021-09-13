@@ -1,13 +1,33 @@
 import React, {useState} from 'react';
 import Header from '../header/header';
+import RecipieCreator from '../recipiecard/recipiecard';
+import { RecipieCard } from '../recipiecard/style';
 import { homeContainer, ImageContainer, RecipeList, RecipeContainer, SearchBar } from './style';
 
 const HomePage = () => {
 
-    const Recipies = (props) => {
 
-        const [recipie, setRecipie] = useState([])
-    }
+        const restExample = [
+            {
+            name: 'pizza',
+            ingridients: [{
+                value: 'liszt'
+            },
+            {
+                value: 'paradicsom'
+            }],
+            difficulty: 'medium',
+            preparation: 'in da oven'
+            },{
+            name: 'bread',
+            ingridients: 'flour',
+            difficulty: 'medium',
+            preparation: 'cook it until its ready'
+            },
+        ];
+        
+        const [recipies, setRecipies] = useState(restExample)
+    
 
     return (
         <homeContainer>
@@ -16,10 +36,9 @@ const HomePage = () => {
                 <SearchBar placeholder='Search...'></SearchBar>
             </ImageContainer>
             <RecipeList>
-                <RecipeContainer/>
-                <RecipeContainer/>
-                <RecipeContainer/>
-                <RecipeContainer/>
+                    {recipies.map((recipie) =>
+                        <RecipieCreator key={recipie.name}/>)}     
+
             </RecipeList>
 
         </homeContainer>
