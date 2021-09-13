@@ -29,6 +29,17 @@ const AddRecipe = () => {
         setValue('');
     }
 
+    const submitRecipie = (e) => {
+        e.preventDefault();
+
+        let formData = new FormData();
+        formData.append('ingridients', ingridients)
+        formData.append('preparation', preparation)
+        formData.append('difficulty', difficulty)
+        formData.append('name', name)
+
+    }
+
     return (
         <RecipeWrapper>
             <AddContainer>
@@ -71,7 +82,7 @@ const AddRecipe = () => {
                         </select>
                     </BottomWrapperRight>
                 </BottomWrapper>
-                <button>Submit</button>
+                <button onClick={submitRecipie}>Submit</button>
             </AddContainer>
         </RecipeWrapper>
     )
