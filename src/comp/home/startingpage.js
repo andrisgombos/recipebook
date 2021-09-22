@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { connect } from 'react-redux';
 import Header from '../header/header';
 import RecipieCreator from '../recipiecard/recipiecard';
 import { RecipieCard } from '../recipiecard/style';
@@ -46,4 +47,4 @@ const HomePage = () => {
 }
 
 
-export default HomePage;
+export default connect() (HomePage);

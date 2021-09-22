@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { RecipieCard, RecipieName, RecipieDifficulty, RecipiePreparation } from './style';
 
 
@@ -9,9 +10,9 @@ const RecipieCreator = (recipie) => {
         <RecipieCard>
             <RecipieName>{recipie.name}A</RecipieName>
             <RecipiePreparation>{recipie.preparation}C</RecipiePreparation>
-            <RecipieDifficulty>{recipie.difficulty}B</RecipieDifficulty>
+            <RecipieDifficulty>{recipie.difficulty}C</RecipieDifficulty>
         </RecipieCard>
     )
 }
 
-export default RecipieCreator;
+export default connect() (RecipieCreator);
