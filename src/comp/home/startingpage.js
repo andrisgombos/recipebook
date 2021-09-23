@@ -38,7 +38,7 @@ const HomePage = () => {
             </ImageContainer>
             <RecipeList>
                     {recipies.map((recipie) =>
-                        <RecipieCreator key={recipie.name}/>)}     
+                        <RecipieCreator name={recipie.name} preparation={recipie.preparation} difficulty={recipie.difficulty}/>)}     
 
             </RecipeList>
 
