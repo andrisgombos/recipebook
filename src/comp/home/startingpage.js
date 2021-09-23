@@ -11,12 +11,7 @@ const HomePage = () => {
         const restExample = [
             {
             name: 'pizza',
-            ingridients: [{
-                value: 'liszt'
-            },
-            {
-                value: 'paradicsom'
-            }],
+            ingridients: ['liszt','paradicsom'],
             difficulty: 'medium',
             preparation: 'in da oven'
             },{
@@ -25,6 +20,12 @@ const HomePage = () => {
             difficulty: 'medium',
             preparation: 'cook it until its ready'
             },
+            {
+                name: 'rice pudding',
+                ingridients: ['rice','milk'],
+                difficulty: 'easy',
+                preparation: 'just cook em togetheeeeeeeeeeeeeeeeeeeeeeeeeeeer'
+                },
         ];
         
         const [recipies, setRecipies] = useState(restExample)
@@ -38,7 +39,7 @@ const HomePage = () => {
             </ImageContainer>
             <RecipeList>
                     {recipies.map((recipie) =>
-                        <RecipieCreator name={recipie.name} preparation={recipie.preparation} difficulty={recipie.difficulty}/>)}     
+                        <RecipieCreator name={recipie.name} preparation={recipie.preparation} difficulty={recipie.difficulty} ingridients={recipie.ingridients}/>)}     
 
             </RecipeList>
 

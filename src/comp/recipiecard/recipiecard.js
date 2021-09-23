@@ -10,6 +10,7 @@ const RecipieCreator = (recipie) => {
         <RecipieCard>
             <RecipieName>{recipie.name}</RecipieName>
             <RecipiePreparation>{recipie.preparation}</RecipiePreparation>
+            <RecipiePreparation>{recipie.ingridients}</RecipiePreparation>
             <RecipieDifficulty>{recipie.difficulty}</RecipieDifficulty>
         </RecipieCard>
     )
