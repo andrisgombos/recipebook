@@ -5,5 +5,5 @@ export const HeaderContainer = styled.div`
     width: 100%;
     justify-content: space-between;
     top: 0;
-    background-color: lightblue;
+    background-color: #e47d32;
     `
