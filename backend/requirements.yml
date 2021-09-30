@@ -1,0 +1,6 @@
+name: recipie
+dependencies:
+  - python=3.9
+  - pip=21.0.1
+  - pip:
+      - Django==3.1.7
