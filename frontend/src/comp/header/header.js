@@ -1,19 +1,21 @@
 import React from 'react';
-import { HeaderContainer } from './style';
+import { HeaderBar, HeaderContainer, HeaderButton } from './style';
 
 
 const Header = () => {
 
     return (
 
-        <HeaderContainer>
-            <div>
-                <button>Home</button>
-                <button>Search</button>
-                <button>Add recipe</button>
-            </div>
-                <button>Login</button>
-        </HeaderContainer>
+        <HeaderBar>
+            <HeaderContainer>
+                <HeaderButton>Home</HeaderButton>
+                <HeaderButton>Search</HeaderButton>
+                <HeaderButton>Add recipe</HeaderButton>
+            </HeaderContainer>
+            <HeaderContainer>
+                <HeaderButton>Login</HeaderButton>
+            </HeaderContainer>
+        </HeaderBar>
 
     )
 
