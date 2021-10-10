@@ -29,7 +29,6 @@ export const HeaderContainer = styled.div`
     color: #fffc;
     `
 export const HeaderButton = styled.button`
-    border-radius:17px;
 	border:1px solid transparent;
     background-color: transparent;
     color: #fffc;
@@ -38,4 +37,8 @@ export const HeaderButton = styled.button`
     padding:6px 17px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px;
+    transition: 0.6s linear all;
+    &:hover {
+        box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
+      }
     `
