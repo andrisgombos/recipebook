@@ -7,10 +7,7 @@ const RecipieCreator = (recipie) => {
 
     const colors = ['#f9f4b1', '#aff0f6', '#cdeaba', '#fed9bd']
 
-    const randomBackground = () => {
-        Math.floor(Math.random() * colors.length)
-        console.log(randomBackground)
-    }
+    const randomBackground = Math.floor(Math.random() * colors.length)
 
     return  (
         <RecipieCard style={{backgroundColor: colors[randomBackground]}}>
