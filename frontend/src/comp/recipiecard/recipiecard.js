@@ -5,9 +5,15 @@ import { RecipieCard, RecipieName, RecipieDifficulty, RecipiePreparation } from 
 
 const RecipieCreator = (recipie) => {
 
+    const colors = ['#f9f4b1', '#aff0f6', '#cdeaba', '#fed9bd']
+
+    const randomBackground = () => {
+        Math.floor(Math.random() * colors.length)
+        console.log(randomBackground)
+    }
 
     return  (
-        <RecipieCard>
+        <RecipieCard style={{backgroundColor: colors[randomBackground]}}>
             <RecipieName>{recipie.name}</RecipieName>
             <RecipiePreparation>{recipie.preparation}</RecipiePreparation>
             <RecipiePreparation>{recipie.ingridients}</RecipiePreparation>
