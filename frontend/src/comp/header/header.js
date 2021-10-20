@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeaderBar, HeaderContainer, HeaderButton } from './style';
+import {Link, useHistory} from "react-router-dom";
 
 
 const Header = () => {
@@ -8,12 +9,12 @@ const Header = () => {
 
         <HeaderBar>
             <HeaderContainer>
-                <HeaderButton>Home</HeaderButton>
-                <HeaderButton>Search</HeaderButton>
-                <HeaderButton>Add recipe</HeaderButton>
+                <Link to="/"><HeaderButton>Home</HeaderButton></Link>
+                <Link to="/"><HeaderButton>Search</HeaderButton></Link>
+                <Link to="/add"><HeaderButton>Add recipe</HeaderButton></Link>
             </HeaderContainer>
             <HeaderContainer>
-                <HeaderButton>Login</HeaderButton>
+            <Link to="/"><HeaderButton>Login</HeaderButton></Link>
             </HeaderContainer>
         </HeaderBar>
 

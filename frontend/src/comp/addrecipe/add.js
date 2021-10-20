@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { AddContainer, AddInput, AddPreparation, BottomWrapper, BottomWrapperLeft, BottomWrapperRight, RecipeWrapper, TopWrapper } from './style';
 import RecipeIngridients from './ingridient'
+import Header from '../header/header';
 
 
 const AddRecipe = () => {
@@ -41,6 +42,8 @@ const AddRecipe = () => {
     }
 
     return (
+        <>
+        <Header/>
         <RecipeWrapper>
             <AddContainer>
                 <TopWrapper>
@@ -85,6 +88,7 @@ const AddRecipe = () => {
                 <button onClick={submitRecipie}>Submit</button>
             </AddContainer>
         </RecipeWrapper>
+        </>
     )
 
 }
