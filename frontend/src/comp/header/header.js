@@ -14,7 +14,7 @@ const Header = () => {
                 <Link to="/add"><HeaderButton>Add recipe</HeaderButton></Link>
             </HeaderContainer>
             <HeaderContainer>
-            <Link to="/"><HeaderButton>Login</HeaderButton></Link>
+            <Link to="/login"><HeaderButton>Login</HeaderButton></Link>
             </HeaderContainer>
         </HeaderBar>
 
