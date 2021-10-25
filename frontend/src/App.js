@@ -4,7 +4,7 @@ import RecipeIngridients from './comp/addrecipe/ingridient';
 import Header from './comp/header/header';
 import HomePage from './comp/home/startingpage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './comp/login/login';
+import Login from './comp/auth/login';
 
 function App() {
   return (

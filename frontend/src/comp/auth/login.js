@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { RecipeWrapper } from '../addrecipe/style';
 import Header from '../header/header';
-import { LoginMsg, LoginCont, Input } from './style';
+import { LoginMsg, LoginCont, Input, Button } from './style';
 
 const Login = (props) => {
 
@@ -17,6 +17,7 @@ const Login = (props) => {
                         Login
                         <Input placeholder="Email"></Input>
                         <Input placeholder="Password"></Input>
+                        <Button type='submit' /* onClick={} */>Register</Button>
                     </LoginMsg>
                 </LoginCont>
             </RecipeWrapper>

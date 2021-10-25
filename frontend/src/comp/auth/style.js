@@ -21,7 +21,16 @@ export const LoginCont = styled.div`
 export const Input = styled.input`
     padding: 0.7em 1em;
     width: 20%;
-    margin-top: 2em;
+    margin: 2em;
     border-radius: 30px;
     border: 1.5px #e5e5e5;
     `
+
+export const Button = styled.button`
+    border-radius: 28px;
+    background: #3498db;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+`
