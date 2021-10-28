@@ -33,4 +33,5 @@ export const Button = styled.button`
     color: #ffffff;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
+    border: 1.5px transparent;
 `
