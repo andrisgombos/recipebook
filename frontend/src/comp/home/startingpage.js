@@ -21,11 +21,11 @@ const HomePage = () => {
             preparation: 'cook it until its ready'
             },
             {
-                name: 'rice pudding',
-                ingridients: ['rice','milk'],
-                difficulty: 'easy',
-                preparation: 'just cook em togetheeeeeeeeeeeeeeeeeeeeeeeeeeeer'
-                },
+            name: 'rice pudding',
+            ingridients: ['rice','milk'],
+            difficulty: 'easy',
+            preparation: 'just cook em togetheeeeeeeeeeeeeeeeeeeeeeeeeeeer'
+            },
         ];
         
         const [recipies, setRecipies] = useState(restExample)

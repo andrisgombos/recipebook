@@ -7,6 +7,7 @@ export const LoginMsg = styled.div`
     justify-content: center;
     align-items: center;
     font-weight: bold;
+
     width: 100%;
     height: 100%;
     `
@@ -22,7 +23,8 @@ export const Input = styled.input`
     padding: 0.7em 1em;
     width: 20%;
     margin: 2em;
-    border-radius: 30px;
+    b
+    
     border: 1.5px #e5e5e5;
     `
 
